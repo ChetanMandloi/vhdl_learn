@@ -1,0 +1,17 @@
+transcript off
+onbreak {quit -force}
+onerror {quit -force}
+transcript on
+
+vlib work
+vmap -link {}
+vlib activehdl/xil_defaultlib
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../ipstatic" -l xil_defaultlib \
+"../../../../sync_d_flipflop.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_clk_wiz.v" \
+"../../../../sync_d_flipflop.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.v" \
+
+
+vlog -work xil_defaultlib \
+"glbl.v"
+

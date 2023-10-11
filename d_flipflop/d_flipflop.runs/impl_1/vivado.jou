@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Oct  5 15:37:41 2023
+# Process ID: 82456
+# Current directory: /home/dhep/vivado_proj/d_flipflop/d_flipflop.runs/impl_1
+# Command line: vivado -log edge_d_flipflop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source edge_d_flipflop.tcl -notrace
+# Log file: /home/dhep/vivado_proj/d_flipflop/d_flipflop.runs/impl_1/edge_d_flipflop.vdi
+# Journal file: /home/dhep/vivado_proj/d_flipflop/d_flipflop.runs/impl_1/vivado.jou
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2035.360 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+#-----------------------------------------------------------
+source edge_d_flipflop.tcl -notrace

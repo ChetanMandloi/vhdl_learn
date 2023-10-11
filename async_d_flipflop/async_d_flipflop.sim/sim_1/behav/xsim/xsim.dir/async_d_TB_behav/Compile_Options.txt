@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "async_d_TB_behav" "xil_defaultlib.async_d_TB" -log "elaborate.log" 

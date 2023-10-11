@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "../../../../PLL.gen/sources_1/bd/pll_design/ipshared/30ef" \
+"../../../bd/pll_design/ip/pll_design_clk_wiz_0_0/pll_design_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/pll_design/ip/pll_design_clk_wiz_0_0/pll_design_clk_wiz_0_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

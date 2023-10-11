@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1696564312">
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="async_d_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="async_d_routed.rqs"/>
+  <File Type="RBD_FILE" Name="async_d.rbd"/>
+  <File Type="NPI_FILE" Name="async_d.npi"/>
+  <File Type="RNPI_FILE" Name="async_d.rnpi"/>
+  <File Type="CFI_FILE" Name="async_d.cfi"/>
+  <File Type="RCFI_FILE" Name="async_d.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="async_d_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="async_d_soc.pdi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="async_d_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="async_d_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="async_d_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="async_d_methodology_drc_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="async_d_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="async_d_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="async_d_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="async_d_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="async_d_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="async_d_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="async_d_postroute_physopt_bb.dcp"/>
+  <File Type="PLACE-IO" Name="async_d_io_placed.rpt"/>
+  <File Type="OPT-DRC" Name="async_d_drc_opted.rpt"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="async_d.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="async_d.sysdef"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="async_d_postroute_physopt.dcp"/>
+  <File Type="BITSTR-MMI" Name="async_d.mmi"/>
+  <File Type="BITSTR-BMM" Name="async_d_bd.bmm"/>
+  <File Type="PHYSOPT-DCP" Name="async_d_physopt.dcp"/>
+  <File Type="PLACE-UTIL-PB" Name="async_d_utilization_placed.pb"/>
+  <File Type="BG-BGN" Name="async_d.bgn"/>
+  <File Type="OPT-DCP" Name="async_d_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="async_d.hwdef"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="BG-BIT" Name="async_d.bit"/>
+  <File Type="ROUTE-BUS-SKEW" Name="async_d_bus_skew_routed.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PA-TCL" Name="async_d.tcl"/>
+  <File Type="REPORTS-TCL" Name="async_d_reports.tcl"/>
+  <File Type="PLACE-UTIL" Name="async_d_utilization_placed.rpt"/>
+  <File Type="BG-DRC" Name="async_d.drc"/>
+  <File Type="PLACE-CTRL" Name="async_d_control_sets_placed.rpt"/>
+  <File Type="PDI-FILE" Name="async_d.pdi"/>
+  <File Type="RDI-RDI" Name="async_d.vdi"/>
+  <File Type="BG-BIN" Name="async_d.bin"/>
+  <File Type="PLACE-DCP" Name="async_d_placed.dcp"/>
+  <File Type="BITSTR-MSK" Name="async_d.msk"/>
+  <File Type="PWROPT-DCP" Name="async_d_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="async_d_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BITSTR-RBT" Name="async_d.rbt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="async_d_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-NKY" Name="async_d.nky"/>
+  <File Type="ROUTE-DRC" Name="async_d_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="async_d_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="async_d_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="async_d_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="async_d_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="async_d_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="async_d_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="async_d_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="async_d_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="async_d_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="async_d_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="async_d_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="async_d_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="async_d_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="async_d_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="async_d_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="async_d_bus_skew_routed.rpx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/async_d.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="async_d"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sync_d_flipflop/sync_d_flipflop.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1696563684"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/dhep/vivado_proj/PLL/PLL.srcs/sources_1/new/pll.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'using_PLLs'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/dhep/vivado_proj/PLL/PLL.srcs/sim_1/new/pll_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pll_sim'

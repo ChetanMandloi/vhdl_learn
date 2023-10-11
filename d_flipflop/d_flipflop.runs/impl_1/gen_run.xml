@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1696500356">
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="edge_d_flipflop_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="edge_d_flipflop_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-BGN" Name="edge_d_flipflop.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="edge_d_flipflop.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="edge_d_flipflop.ltx"/>
+  <File Type="RBD_FILE" Name="edge_d_flipflop.rbd"/>
+  <File Type="NPI_FILE" Name="edge_d_flipflop.npi"/>
+  <File Type="RNPI_FILE" Name="edge_d_flipflop.rnpi"/>
+  <File Type="CFI_FILE" Name="edge_d_flipflop.cfi"/>
+  <File Type="RCFI_FILE" Name="edge_d_flipflop.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="edge_d_flipflop_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="edge_d_flipflop_soc.pdi"/>
+  <File Type="RDI-RDI" Name="edge_d_flipflop.vdi"/>
+  <File Type="PDI-FILE" Name="edge_d_flipflop.pdi"/>
+  <File Type="BITSTR-MMI" Name="edge_d_flipflop.mmi"/>
+  <File Type="BITSTR-BMM" Name="edge_d_flipflop_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="edge_d_flipflop.nky"/>
+  <File Type="BITSTR-RBT" Name="edge_d_flipflop.rbt"/>
+  <File Type="BITSTR-MSK" Name="edge_d_flipflop.msk"/>
+  <File Type="BG-BIN" Name="edge_d_flipflop.bin"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="BG-BIT" Name="edge_d_flipflop.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="edge_d_flipflop_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="edge_d_flipflop_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="edge_d_flipflop_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="edge_d_flipflop_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="edge_d_flipflop_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="edge_d_flipflop_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="edge_d_flipflop_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="edge_d_flipflop_postroute_physopt.dcp"/>
+  <File Type="BG-DRC" Name="edge_d_flipflop.drc"/>
+  <File Type="ROUTE-RQS-PB" Name="edge_d_flipflop_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="edge_d_flipflop_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="edge_d_flipflop_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="edge_d_flipflop_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="edge_d_flipflop_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="edge_d_flipflop_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="edge_d_flipflop_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="edge_d_flipflop_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="edge_d_flipflop_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="edge_d_flipflop_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="edge_d_flipflop_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="edge_d_flipflop_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="edge_d_flipflop_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="edge_d_flipflop_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="edge_d_flipflop_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="edge_d_flipflop_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="edge_d_flipflop_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="edge_d_flipflop_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="edge_d_flipflop_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="edge_d_flipflop_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="edge_d_flipflop_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="edge_d_flipflop_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="edge_d_flipflop_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="edge_d_flipflop_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="edge_d_flipflop_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="edge_d_flipflop_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="edge_d_flipflop_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="edge_d_flipflop_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="edge_d_flipflop_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="edge_d_flipflop_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="edge_d_flipflop_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="edge_d_flipflop_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="edge_d_flipflop_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="edge_d_flipflop_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="edge_d_flipflop_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="edge_d_flipflop_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="edge_d_flipflop_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="edge_d_flipflop_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="edge_d_flipflop_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="edge_d_flipflop_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="edge_d_flipflop_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="edge_d_flipflop_rqa_opted.pb"/>
+  <File Type="OPT-HWDEF" Name="edge_d_flipflop.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="edge_d_flipflop_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="edge_d_flipflop_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="edge_d_flipflop_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="edge_d_flipflop_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="edge_d_flipflop_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="edge_d_flipflop_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="edge_d_flipflop.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/edge_d_flipflop.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="edge_d_flipflop"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/digilent-xdc-master/Nexys-A7-100T-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1686951711"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/edge_d_flipflop.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

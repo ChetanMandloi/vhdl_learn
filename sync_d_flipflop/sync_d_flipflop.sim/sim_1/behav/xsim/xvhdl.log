@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/dhep/vivado_proj/sync_d_flipflop/sync_d_flipflop.srcs/sim_1/new/sync_d_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sync_d_TB'

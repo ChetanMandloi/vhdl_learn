@@ -1,0 +1,55 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date: 10/10/2023 03:59:52 PM
+-- Design Name: 
+-- Module Name: 0_5hz_clock_sim - Behavioral
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity one_hz_clock_sim is
+
+end one_hz_clock_sim;
+
+architecture Behavioral of one_hz_clock_sim is
+    component slow_clock_use is
+    Port(
+        CLK100MHz: in std_logic:= '0'; 
+        led: out std_logic); 
+    end component;
+    signal CLK, LED : std_logic;
+    begin
+    uut: slow_clock_use port map(CLK100Mhz => CLK, led => LED);
+    Clock: process
+        begin
+            CLK<= '0';
+            wait for 5 ns;
+            CLK<= '1';
+            wait for 5ns;
+        end process;
+
+end Behavioral;

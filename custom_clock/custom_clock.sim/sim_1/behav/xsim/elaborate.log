@@ -1,0 +1,8 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot one_hz_clock_sim_behav xil_defaultlib.one_hz_clock_sim -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-718] formal port <CLK100MHz> does not exist in entity <slow_clock_use>.  Please compare the definition of block <slow_clock_use> to its component declaration and its instantion to detect the mismatch. [/home/dhep/vivado_proj/custom_clock/custom_clock.srcs/sim_1/new/led_sim.vhd:41]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit one_hz_clock_sim in library work failed.

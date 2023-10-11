@@ -1,0 +1,51 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Sep 29 09:52:02 2023
+| Host         : dhep-sipm running 64-bit Ubuntu 22.04.1 LTS
+| Command      : report_methodology -file wave_gen_methodology_drc_routed.rpt -pb wave_gen_methodology_drc_routed.pb -rpx wave_gen_methodology_drc_routed.rpx
+| Design       : wave_gen
+| Device       : xc7k70tfbg676-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 2
++----------+----------+-------------------------------------------------+------------+
+| Rule     | Severity | Description                                     | Violations |
++----------+----------+-------------------------------------------------+------------+
+| LUTAR-1  | Warning  | LUT drives async reset alert                    | 1          |
+| PDRC-190 | Warning  | Suboptimally placed synchronized register chain | 1          |
++----------+----------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell clk_gen_i0/rst_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) rst_gen_i0/reset_bridge_clk_rx_i0/rst_dst_reg/PRE,
+rst_gen_i0/reset_bridge_clk_rx_i0/rst_meta_reg/PRE,
+rst_gen_i0/reset_bridge_clk_samp_i0/rst_dst_reg/PRE,
+rst_gen_i0/reset_bridge_clk_samp_i0/rst_meta_reg/PRE,
+rst_gen_i0/reset_bridge_clk_tx_i0/rst_dst_reg/PRE
+rst_gen_i0/reset_bridge_clk_tx_i0/rst_meta_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell char_fifo_i0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X19Y46 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell char_fifo_i0/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+

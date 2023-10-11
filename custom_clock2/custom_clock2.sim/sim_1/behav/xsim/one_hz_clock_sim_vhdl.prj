@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../custom_clock2.srcs/sources_1/new/blinker.vhd" \
+"../../../../custom_clock2.srcs/sources_1/new/slow_gen.vhd" \
+"../../../../custom_clock2.srcs/sources_1/new/top_module.vhd" \
+"../../../../custom_clock2.srcs/sim_1/new/led_sim.vhd" \
+
+# Do not sort compile order
+nosort
