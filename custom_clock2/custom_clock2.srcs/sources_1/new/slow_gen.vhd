@@ -37,14 +37,14 @@ entity slow_gen is
 end slow_gen;
 
 architecture Behavioral of slow_gen is
-    signal clock_counter: natural range 0 to 50000000 := 0;
+    signal clock_counter: natural range 0 to 50000 := 0;
     signal clk_stat : std_logic := '0';
     begin
         process(clk_in)
         begin
             if rising_edge(clk_in) then
                 clock_counter <= clock_counter + 1;
-                if clock_counter >= 50000000 then
+                if clock_counter >= 50000 then
                     clock_counter <= 0;
                     clk_stat <= not clk_stat;
                 end if;
