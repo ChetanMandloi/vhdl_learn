@@ -1,0 +1,4 @@
+Running: xsim.dir/one_hz_clock_sim_behav/xsimk -simmode gui -wdb one_hz_clock_sim_behav.wdb -simrunnum 0 -socket 33441
+Design successfully loaded
+Design Loading Memory Usage: 23476 KB (Peak: 24044 KB)
+Design Loading CPU Usage: 40 ms

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Tue Oct 17 14:42:16 2023
+| Date         : Tue Oct 17 15:25:46 2023
 | Host         : dhep-sipm running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
 | Design       : top_module
@@ -36,8 +36,8 @@ Table of Contents
 |   LUT as Memory            |    1 |     0 |          0 |     19000 | <0.01 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |    1 |     0 |            |           |       |
-| Slice Registers            |   18 |     0 |          0 |    126800 |  0.01 |
-|   Register as Flip Flop    |   18 |     0 |          0 |    126800 |  0.01 |
+| Slice Registers            |   17 |     0 |          0 |    126800 |  0.01 |
+|   Register as Flip Flop    |   17 |     0 |          0 |    126800 |  0.01 |
 |   Register as Latch        |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                   |    0 |     0 |          0 |     31700 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |     15850 |  0.00 |
@@ -61,7 +61,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 18    |          Yes |       Reset |            - |
+| 17    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,14 +150,14 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   18 |        Flop & Latch |
+| FDRE     |   17 |        Flop & Latch |
 | CARRY4   |    4 |          CarryLogic |
 | OBUF     |    2 |                  IO |
 | LUT6     |    2 |                 LUT |
 | LUT1     |    2 |                 LUT |
 | SRL16E   |    1 |  Distributed Memory |
 | LUT5     |    1 |                 LUT |
-| LUT4     |    1 |                 LUT |
+| LUT2     |    1 |                 LUT |
 | IBUF     |    1 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+

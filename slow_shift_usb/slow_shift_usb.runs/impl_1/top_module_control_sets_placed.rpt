@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Tue Oct 17 14:43:18 2023
+| Date         : Tue Oct 17 15:26:50 2023
 | Host         : dhep-sipm running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_control_sets -verbose -file top_module_control_sets_placed.rpt
 | Design       : top_module
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     3 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    14 |
+| Unused register locations in slices containing registers |    15 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -45,8 +45,8 @@ Table of Contents
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
 | >= 16              |     0 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
@@ -60,7 +60,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               4 |            4 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              14 |            4 |
+| No           | Yes                   | No                     |              13 |            4 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -75,7 +75,7 @@ Table of Contents
 +----------------------+---------------+------------------+------------------+----------------+--------------+
 |  CLK100MHZ_IBUF_BUFG |               |                  |                1 |              1 |         1.00 |
 |  comp1/clk_stat      |               |                  |                3 |              4 |         1.33 |
-|  CLK100MHZ_IBUF_BUFG |               | comp1/clear      |                4 |             14 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG |               | comp1/clear      |                4 |             13 |         3.25 |
 +----------------------+---------------+------------------+------------------+----------------+--------------+
 
 

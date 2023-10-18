@@ -41,7 +41,7 @@ end blinker;
 architecture Behavioral of blinker is
     signal led_status: std_logic:='0';
     signal led2_status: std_logic:='0';
-    signal data_8bit: std_logic_vector(9 downto 0):= "1010000010";
+    signal data_8bit: std_logic_vector(10 downto 0):= "11010101000";
     begin
         process(blink_clk_in)
             begin
