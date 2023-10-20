@@ -47,7 +47,7 @@ end uart_tx;
 architecture Behavioral of uart_tx is
 
 type state is(Idle, Start, Data, Stop);
-type packet_tx is (Transmit, Halt);
+--type packet_tx is (Transmit, Halt);
 signal present_state,next_state: state:= Idle;
 
 constant tx_clock_counter_limit : integer := clk_freq/(2*baud_rate);
@@ -55,7 +55,8 @@ constant packet_delay_counter_limit : integer := clk_freq * seconds_per_packet;
 signal   tx_clock_counter   : positive range 1 to tx_clock_counter_limit := 1;
 signal packet_delay_counter : positive range 1 to packet_delay_counter_limit := 1;
 signal   clk_baudrate : std_logic := '0';
-signal packet_send : packet_tx := Halt;
+signal packet_send_f1 : std_logic := '0';
+signal packet_send_f2 : std_logic := '0';
 signal switch_on : std_logic := '0';
 
 constant max_bit_length : natural := 8;                             --maximum number of bits in each state
@@ -71,8 +72,10 @@ begin
 	elsif(rising_edge(clk)) then
 		packet_delay_counter <= packet_delay_counter + 1;
 		if (packet_delay_counter_limit = packet_delay_counter) then 
-			packet_send <= Transmit;
+			packet_send_f2 <= '1';
 			packet_delay_counter<=1;
+	   elsif (packet_delay_counter > 10 and packet_send_f1 = '0') then  
+	       packet_send_f2 <= '0';
 		end if;
 	end if;
 end process;
@@ -106,15 +109,18 @@ begin
 	end if;
 end process;
 
-tx_process: process(present_state,packet_send)
+tx_process: process(present_state,packet_send_f1)
 begin
+    if packet_send_f2 = '1' then
+        packet_send_f1 <= '1';
+    end if ;
 	case present_state is 
 	
 		when Idle =>
 			bit_timer<=1;
 			tx<='1';
 			tx_done<='0';
-			if (packet_send= Transmit) then
+			if (packet_send_f1= '1') then
 				next_state <= Start;
 			else
 				next_state <= Idle;
@@ -134,7 +140,7 @@ begin
 			tx <= '1';
 			bit_timer <= 1;
 			tx_done <= '1';
-			packet_send <= Halt;
+			packet_send_f1 <= '0';
 		    next_state <= Idle;
 			
 		end case;

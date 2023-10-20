@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Oct 18 16:43:24 2023
-# Process ID: 143933
+# Start of session at: Thu Oct 19 10:05:22 2023
+# Process ID: 19422
 # Current directory: /home/dhep/vivado_proj/uart_tx_delay/uart_tx_delay.runs/synth_1
 # Command line: vivado -log uart_tx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_tx.tcl
 # Log file: /home/dhep/vivado_proj/uart_tx_delay/uart_tx_delay.runs/synth_1/uart_tx.vds
 # Journal file: /home/dhep/vivado_proj/uart_tx_delay/uart_tx_delay.runs/synth_1/vivado.jou
-# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2769.033 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2793.274 MHz, CPU Physical cores: 4, Host memory: 12523 MB
 #-----------------------------------------------------------
 source uart_tx.tcl -notrace

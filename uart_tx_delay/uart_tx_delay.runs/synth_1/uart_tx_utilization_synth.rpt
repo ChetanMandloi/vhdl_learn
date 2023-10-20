@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Wed Oct 18 16:44:27 2023
+| Date         : Thu Oct 19 10:06:26 2023
 | Host         : dhep-sipm running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_utilization -file uart_tx_utilization_synth.rpt -pb uart_tx_utilization_synth.pb
 | Design       : uart_tx
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |   38 |     0 |          0 |     63400 |  0.06 |
-|   LUT as Logic          |   38 |     0 |          0 |     63400 |  0.06 |
+| Slice LUTs*             |   46 |     0 |          0 |     63400 |  0.07 |
+|   LUT as Logic          |   46 |     0 |          0 |     63400 |  0.07 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
 | Slice Registers         |   51 |     0 |          0 |    126800 |  0.04 |
 |   Register as Flip Flop |   49 |     0 |          0 |    126800 |  0.04 |
@@ -149,14 +149,14 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDCE     |   44 |        Flop & Latch |
-| LUT4     |   31 |                 LUT |
+| LUT4     |   40 |                 LUT |
 | LUT2     |   15 |                 LUT |
 | CARRY4   |   10 |          CarryLogic |
 | LUT5     |    7 |                 LUT |
 | LUT3     |    4 |                 LUT |
+| LUT6     |    3 |                 LUT |
 | FDPE     |    3 |        Flop & Latch |
 | OBUF     |    2 |                  IO |
-| LUT6     |    2 |                 LUT |
 | LUT1     |    2 |                 LUT |
 | LDCE     |    2 |        Flop & Latch |
 | IBUF     |    2 |                  IO |
