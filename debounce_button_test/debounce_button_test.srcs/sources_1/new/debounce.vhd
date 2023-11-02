@@ -32,8 +32,6 @@ use ieee.std_logic_unsigned.all;
 --use UNISIM.VComponents.all;
 
 entity debounce IS
-  generic(
-    counter_size  :  integer := 20); --counter size (20 bits gives about 10.48ms with 100MHz clock)
   PORT(
     clk     : in std_logic;  --input clock of 100 MHz
     button  : in std_logic;  -- button input
@@ -66,5 +64,6 @@ begin
         counter_out <= counter_out + 1;                                       
       end if;
     end if;
+    unbounced <= button;
   end process;
 end logic;

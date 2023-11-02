@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1698315169" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/debounce.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="debounce_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="debounce.dcp"/>
   <File Type="RDS-UTIL-PB" Name="debounce_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="debounce_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="debounce_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="debounce.vds"/>
-  <File Type="REPORTS-TCL" Name="debounce_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="debounce_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="debounce.tcl"/>
+  <File Type="RDS-UTIL" Name="debounce_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="debounce_reports.tcl"/>
+  <File Type="RDS-RDS" Name="debounce.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/debounce.vhd">

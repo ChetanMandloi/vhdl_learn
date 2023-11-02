@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Nov  2 11:30:51 2023
+# Process ID: 41672
+# Current directory: /home/dhep/vivado_proj/uart_rx/uart_rx.runs/impl_1
+# Command line: vivado -log uart_rx.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uart_rx.tcl -notrace
+# Log file: /home/dhep/vivado_proj/uart_rx/uart_rx.runs/impl_1/uart_rx.vdi
+# Journal file: /home/dhep/vivado_proj/uart_rx/uart_rx.runs/impl_1/vivado.jou
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2458.393 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+#-----------------------------------------------------------
+source uart_rx.tcl -notrace

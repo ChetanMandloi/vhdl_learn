@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Oct 26 12:27:43 2023
-# Process ID: 63885
+# Start of session at: Tue Oct 31 15:26:59 2023
+# Process ID: 122243
 # Current directory: /home/dhep/vivado_proj/debounce_button_test/debounce_button_test.runs/synth_1
 # Command line: vivado -log debounce_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source debounce_test.tcl
 # Log file: /home/dhep/vivado_proj/debounce_button_test/debounce_button_test.runs/synth_1/debounce_test.vds
 # Journal file: /home/dhep/vivado_proj/debounce_button_test/debounce_button_test.runs/synth_1/vivado.jou
-# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2919.930 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2205.703 MHz, CPU Physical cores: 4, Host memory: 12523 MB
 #-----------------------------------------------------------
 source debounce_test.tcl -notrace

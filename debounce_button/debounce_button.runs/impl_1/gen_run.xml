@@ -3,11 +3,6 @@
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="debounce_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS" Name="debounce_routed.rqs"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-BGN" Name="debounce.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="debounce.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="debounce.ltx"/>
   <File Type="RBD_FILE" Name="debounce.rbd"/>
   <File Type="NPI_FILE" Name="debounce.npi"/>
   <File Type="RNPI_FILE" Name="debounce.rnpi"/>
@@ -15,16 +10,10 @@
   <File Type="RCFI_FILE" Name="debounce.rcfi"/>
   <File Type="PL-PDI-FILE" Name="debounce_pld.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="debounce_soc.pdi"/>
-  <File Type="RDI-RDI" Name="debounce.vdi"/>
-  <File Type="PDI-FILE" Name="debounce.pdi"/>
-  <File Type="BITSTR-MMI" Name="debounce.mmi"/>
-  <File Type="BITSTR-BMM" Name="debounce_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="debounce.nky"/>
-  <File Type="BITSTR-RBT" Name="debounce.rbt"/>
-  <File Type="BITSTR-MSK" Name="debounce.msk"/>
-  <File Type="BG-BIN" Name="debounce.bin"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
-  <File Type="BG-BIT" Name="debounce.bit"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="debounce_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="debounce_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="debounce_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="debounce_methodology_drc_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="debounce_bus_skew_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="debounce_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="debounce_bus_skew_postroute_physopted.rpt"/>
@@ -33,57 +22,54 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="debounce_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="debounce_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="debounce_postroute_physopt.dcp"/>
-  <File Type="BG-DRC" Name="debounce.drc"/>
-  <File Type="ROUTE-RQS-PB" Name="debounce_rqs_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="debounce_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="debounce_bus_skew_routed.pb"/>
+  <File Type="PHYSOPT-DCP" Name="debounce_physopt.dcp"/>
+  <File Type="PLACE-IO" Name="debounce_io_placed.rpt"/>
+  <File Type="OPT-DRC" Name="debounce_drc_opted.rpt"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="debounce.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="debounce.sysdef"/>
+  <File Type="BITSTR-MMI" Name="debounce.mmi"/>
+  <File Type="BITSTR-BMM" Name="debounce_bd.bmm"/>
+  <File Type="PLACE-UTIL-PB" Name="debounce_utilization_placed.pb"/>
+  <File Type="BG-BGN" Name="debounce.bgn"/>
+  <File Type="OPT-DCP" Name="debounce_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="debounce.hwdef"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="BG-BIT" Name="debounce.bit"/>
   <File Type="ROUTE-BUS-SKEW" Name="debounce_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="debounce_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="debounce_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="debounce_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="debounce_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="debounce_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="debounce_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="debounce_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="debounce_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="debounce_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="debounce_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="debounce_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="debounce_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="debounce_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="debounce_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="debounce_drc_routed.pb"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PA-TCL" Name="debounce.tcl"/>
+  <File Type="REPORTS-TCL" Name="debounce_reports.tcl"/>
+  <File Type="PLACE-UTIL" Name="debounce_utilization_placed.rpt"/>
+  <File Type="BG-DRC" Name="debounce.drc"/>
+  <File Type="PLACE-CTRL" Name="debounce_control_sets_placed.rpt"/>
+  <File Type="PDI-FILE" Name="debounce.pdi"/>
+  <File Type="RDI-RDI" Name="debounce.vdi"/>
+  <File Type="BG-BIN" Name="debounce.bin"/>
+  <File Type="PLACE-DCP" Name="debounce_placed.dcp"/>
+  <File Type="BITSTR-MSK" Name="debounce.msk"/>
+  <File Type="PWROPT-DCP" Name="debounce_pwropt.dcp"/>
+  <File Type="BITSTR-RBT" Name="debounce.rbt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="debounce_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-NKY" Name="debounce.nky"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="debounce_incremental_reuse_pre_placed.rpt"/>
   <File Type="ROUTE-DRC" Name="debounce_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="debounce_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC-PB" Name="debounce_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="debounce_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="debounce_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="debounce_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="debounce_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="debounce_route_status.pb"/>
   <File Type="ROUTE-DCP" Name="debounce_routed.dcp"/>
   <File Type="ROUTE-ERROR-DCP" Name="debounce_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="debounce_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="debounce_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="debounce_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="debounce_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="debounce_postplace_pwropt.dcp"/>
-  <File Type="PLACE-RQA-PB" Name="debounce_rqa_placed.pb"/>
-  <File Type="PLACE-TIMING" Name="debounce_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="debounce_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="debounce_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="debounce_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="debounce_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="debounce_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="debounce_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="debounce_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="debounce_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="debounce_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="debounce_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="debounce_pwropt.dcp"/>
-  <File Type="OPT-RQA-PB" Name="debounce_rqa_opted.pb"/>
-  <File Type="OPT-HWDEF" Name="debounce.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="debounce_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="debounce_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="debounce_opt.dcp"/>
-  <File Type="OPT-TIMING" Name="debounce_timing_summary_opted.rpt"/>
-  <File Type="REPORTS-TCL" Name="debounce_reports.tcl"/>
-  <File Type="INIT-TIMING" Name="debounce_timing_summary_init.rpt"/>
-  <File Type="PA-TCL" Name="debounce.tcl"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="debounce_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="debounce_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="debounce_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="debounce_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="debounce_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="debounce_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="debounce_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="debounce_bus_skew_routed.rpx"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/debounce.vhd">
@@ -137,5 +123,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

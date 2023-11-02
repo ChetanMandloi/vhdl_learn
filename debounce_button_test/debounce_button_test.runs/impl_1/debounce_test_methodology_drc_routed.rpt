@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Thu Oct 26 12:30:21 2023
+| Date         : Tue Oct 31 15:29:47 2023
 | Host         : dhep-sipm running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_methodology -file debounce_test_methodology_drc_routed.rpt -pb debounce_test_methodology_drc_routed.pb -rpx debounce_test_methodology_drc_routed.rpx
 | Design       : debounce_test
@@ -23,12 +23,23 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 0
-+------+----------+-------------+------------+
-| Rule | Severity | Description | Violations |
-+------+----------+-------------+------------+
-+------+----------+-------------+------------+
+             Violations found: 2
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 2          |
++-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on button relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on led1 relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
 
