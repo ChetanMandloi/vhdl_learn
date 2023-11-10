@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Thu Nov  2 15:21:06 2023
+| Date         : Fri Nov  3 16:02:26 2023
 | Host         : dhep-sipm running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_control_sets -verbose -file uart_Echo_control_sets_placed.rpt
 | Design       : uart_Echo
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    18 |
-|    Minimum number of control sets                        |    18 |
+| Total control sets                                       |    17 |
+|    Minimum number of control sets                        |    17 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   101 |
+| Unused register locations in slices containing registers |    93 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    18 |
+| Total control sets |    17 |
 | >= 0 to < 4        |    11 |
-| >= 4 to < 6        |     2 |
+| >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     2 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     1 |
-| >= 16              |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,39 +58,38 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              31 |           18 |
-| No           | No                    | Yes                    |              17 |            6 |
-| No           | Yes                   | No                     |              33 |            9 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               4 |            2 |
-| Yes          | Yes                   | No                     |              14 |            4 |
+| No           | No                    | No                     |              29 |           16 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              26 |            7 |
+| Yes          | No                    | No                     |               8 |            2 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               4 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------+----------------------------------------+--------------------------+------------------+----------------+--------------+
-|        Clock Signal       |              Enable Signal             |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
-+---------------------------+----------------------------------------+--------------------------+------------------+----------------+--------------+
-|  rx_buffer_reg[2]_i_1_n_0 |                                        |                          |                1 |              1 |         1.00 |
-|  debug_tx_reg_i_2_n_0     |                                        |                          |                1 |              1 |         1.00 |
-|  tx_done_reg_i_1_n_0      |                                        |                          |                1 |              1 |         1.00 |
-|  rx_buffer_reg[7]_i_1_n_0 |                                        |                          |                1 |              1 |         1.00 |
-|  rx_buffer_reg[6]_i_1_n_0 |                                        |                          |                1 |              1 |         1.00 |
-|  rx_buffer_reg[5]_i_1_n_0 |                                        |                          |                1 |              1 |         1.00 |
-|  rx_buffer_reg[4]_i_1_n_0 |                                        |                          |                1 |              1 |         1.00 |
-|  rx_buffer_reg[3]_i_1_n_0 |                                        |                          |                1 |              1 |         1.00 |
-|  rx_buffer_reg[0]_i_1_n_0 |                                        |                          |                1 |              1 |         1.00 |
-|  rx_buffer_reg[1]_i_1_n_0 |                                        |                          |                1 |              1 |         1.00 |
-|  tx_clk_baudrate_reg_n_0  |                                        | rst_IBUF                 |                2 |              3 |         1.50 |
-|  tx_clk_baudrate_reg_n_0  | FSM_onehot_tx_present_state[3]_i_1_n_0 | rst_IBUF                 |                2 |              4 |         2.00 |
-|  rx_clk_baudrate_reg_n_0  |                                        |                          |                1 |              4 |         4.00 |
-| ~rx_present_state         |                                        |                          |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG            |                                        |                          |                4 |              9 |         2.25 |
-|  clk_IBUF_BUFG            | trig_counter0                          | trig_counter[14]_i_1_n_0 |                4 |             14 |         3.50 |
-|  clk_IBUF_BUFG            |                                        | comp/counter_start       |                5 |             20 |         4.00 |
-|  clk_IBUF_BUFG            |                                        | rst_IBUF                 |                8 |             27 |         3.38 |
-+---------------------------+----------------------------------------+--------------------------+------------------+----------------+--------------+
++---------------------------+-------------------+------------------+------------------+----------------+--------------+
+|        Clock Signal       |   Enable Signal   | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------+-------------------+------------------+------------------+----------------+--------------+
+|  rx_buffer_reg[1]_i_1_n_0 |                   |                  |                1 |              1 |         1.00 |
+|  rx_buffer_reg[6]_i_1_n_0 |                   |                  |                1 |              1 |         1.00 |
+|  tx_done_reg_i_1_n_0      |                   |                  |                1 |              1 |         1.00 |
+|  rx_buffer_reg[7]_i_1_n_0 |                   |                  |                1 |              1 |         1.00 |
+|  rx_buffer_reg[5]_i_1_n_0 |                   |                  |                1 |              1 |         1.00 |
+|  rx_buffer_reg[4]_i_1_n_0 |                   |                  |                1 |              1 |         1.00 |
+|  rx_buffer_reg[3]_i_1_n_0 |                   |                  |                1 |              1 |         1.00 |
+|  rx_buffer_reg[2]_i_1_n_0 |                   |                  |                1 |              1 |         1.00 |
+|  rx_buffer_reg[0]_i_1_n_0 |                   |                  |                1 |              1 |         1.00 |
+|  debug_tx_reg_i_2_n_0     |                   |                  |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG            |                   |                  |                1 |              2 |         2.00 |
+|  tx_clk_baudrate_reg_n_0  |                   |                  |                1 |              4 |         4.00 |
+|  tx_clk_baudrate_reg_n_0  | tx_present_state0 | rst_IBUF         |                1 |              4 |         4.00 |
+|  rx_clk_baudrate_reg_n_0  |                   |                  |                2 |              5 |         2.50 |
+|  tx_clk_baudrate_reg_n_0  | data_to_send      |                  |                2 |              8 |         4.00 |
+| ~rx_present_state         |                   |                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG            |                   | rst_IBUF         |                7 |             26 |         3.71 |
++---------------------------+-------------------+------------------+------------------+----------------+--------------+
 
 

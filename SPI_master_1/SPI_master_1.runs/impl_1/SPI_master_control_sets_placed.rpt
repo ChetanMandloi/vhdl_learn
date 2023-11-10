@@ -1,0 +1,91 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Fri Nov 10 10:26:50 2023
+| Host         : dhep-sipm running 64-bit Ubuntu 22.04.3 LTS
+| Command      : report_control_sets -verbose -file SPI_master_control_sets_placed.rpt
+| Design       : SPI_master
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    13 |
+|    Minimum number of control sets                        |    13 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    57 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    13 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              68 |           30 |
+| No           | No                    | Yes                    |               3 |            2 |
+| No           | Yes                   | No                     |              32 |            8 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+---------------+------------------------+------------------+----------------+--------------+
+|        Clock Signal        | Enable Signal |    Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------+---------------+------------------------+------------------+----------------+--------------+
+|  MOSI_reg_i_2_n_1          |               |                        |                1 |              1 |         1.00 |
+|  MISO_REG_reg[7]_i_2_n_1   |               |                        |                1 |              1 |         1.00 |
+|  FSM_onehot_PS_reg_n_1_[0] |               |                        |                1 |              1 |         1.00 |
+|  M_Done_reg_i_2_n_1        |               |                        |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG             |               |                        |                1 |              2 |         2.00 |
+|  SCK_EN_reg_i_2_n_1        |               |                        |                2 |              2 |         1.00 |
+|  CLK_IBUF_BUFG             |               | RESET_IBUF             |                2 |              3 |         1.50 |
+|  NS__0                     |               |                        |                1 |              3 |         3.00 |
+|  MISO_REG_reg[6]_i_2_n_1   |               |                        |                2 |              7 |         3.50 |
+|  MOSI_REG_reg[7]_i_2_n_1   |               |                        |                2 |              8 |         4.00 |
+|  MOUT_REG__0               |               |                        |                3 |             10 |         3.33 |
+|  CLK_IBUF_BUFG             |               | SCK_COUNTER[0]_i_1_n_1 |                8 |             32 |         4.00 |
+|  n_0_26_BUFG               |               |                        |               15 |             32 |         2.13 |
++----------------------------+---------------+------------------------+------------------+----------------+--------------+
+
+

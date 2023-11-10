@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date             : Thu Nov  2 15:21:51 2023
+| Date             : Fri Nov  3 16:03:10 2023
 | Host             : dhep-sipm running 64-bit Ubuntu 22.04.3 LTS
 | Command          : report_power -file uart_Echo_power_routed.rpt -pb uart_Echo_power_summary_routed.pb -rpx uart_Echo_power_routed.rpx
 | Design           : uart_Echo
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.104        |
+| Total On-Chip Power (W)  | 0.103        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.006        |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      214 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       58 |     63400 |            0.09 |
-|   Register     |    <0.001 |       99 |    126800 |            0.08 |
-|   CARRY4       |    <0.001 |       15 |     15850 |            0.09 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      191 |       --- |             --- |
-| I/O            |     0.004 |       16 |       210 |            7.62 |
+| Clocks         |    <0.001 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      140 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       40 |     63400 |            0.06 |
+|   Register     |    <0.001 |       67 |    126800 |            0.05 |
+|   CARRY4       |    <0.001 |        6 |     15850 |            0.04 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |    <0.001 |      125 |       --- |             --- |
+| I/O            |     0.004 |       15 |       210 |            7.14 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.104 |          |           |                 |
+| Total          |     0.103 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
