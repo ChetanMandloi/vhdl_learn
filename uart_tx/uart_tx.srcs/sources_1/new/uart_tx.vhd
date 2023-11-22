@@ -39,6 +39,7 @@ entity uart_tx is
         data_to_send : std_logic_vector(7 downto 0):= "01110001");
     port(
     clk,trig,reset : in std_logic;
+    --TODO tx busy and ready pins
     tx,tx_done 	 : out std_logic);
 
 end uart_tx;
@@ -60,25 +61,27 @@ begin
 
 baud_rate_generator: process(clk,reset)
 begin
-	if (reset='1') then 
-		tx_clock_counter<=1;
-	elsif(rising_edge(clk)) then
-		tx_clock_counter<=tx_clock_counter+1;
-		if (tx_clock_counter_limit=tx_clock_counter) then 
-			clk_baudrate<= not clk_baudrate;
-			tx_clock_counter<=1;
-		end if;
+	
+	if(rising_edge(clk)) then
+        if (reset='1') then 
+            tx_clock_counter<=1;
+            tx_clock_counter<=tx_clock_counter+1;
+        elsif (tx_clock_counter_limit=tx_clock_counter) then 
+            clk_baudrate<= not clk_baudrate;
+            tx_clock_counter<=1;
+        end if;
 	end if;
 end process;
 
 bit_index_calculator: process(clk_baudrate,reset)
 
 begin
-	if (reset='1') then 
-		present_state <= Idle;
-		bit_index <= 0;
-	elsif(rising_edge(clk_baudrate)) then
-		if(bit_index = bit_timer-1) then
+	
+	if(rising_edge(clk_baudrate)) then
+        if (reset='1') then 
+            present_state <= Idle;
+            bit_index <= 0;
+		elsif(bit_index = bit_timer-1) then
 			present_state <= next_state;
 			bit_index <= 0;
 		else
