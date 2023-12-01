@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Dec  1 11:31:29 2023
+# Process ID: 40945
+# Current directory: /home/dhep/GitRepos/vhdl_learn/UART_projects/uart_tx_multibyte/uart_tx_multibyte.runs/impl_1
+# Command line: vivado -log uart_tx.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uart_tx.tcl -notrace
+# Log file: /home/dhep/GitRepos/vhdl_learn/UART_projects/uart_tx_multibyte/uart_tx_multibyte.runs/impl_1/uart_tx.vdi
+# Journal file: /home/dhep/GitRepos/vhdl_learn/UART_projects/uart_tx_multibyte/uart_tx_multibyte.runs/impl_1/vivado.jou
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 1596.044 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+#-----------------------------------------------------------
+source uart_tx.tcl -notrace
