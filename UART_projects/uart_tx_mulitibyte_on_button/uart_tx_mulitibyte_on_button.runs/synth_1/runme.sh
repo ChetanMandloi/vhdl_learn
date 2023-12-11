@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/dhep/GitRepos/vhdl_learn/UART_projects/uart_tx_mulitibyte_on_button/uart_tx_mulitibyte_on_button.runs/synth_1'
+HD_PWD='/home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_tx_mulitibyte_on_button/uart_tx_mulitibyte_on_button.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

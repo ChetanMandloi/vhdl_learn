@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Dec  1 11:38:41 2023
+| Date         : Wed Dec  6 10:01:51 2023
 | Host         : dhep-sipm running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_drc -file uart_tx_drc_routed.rpt -pb uart_tx_drc_routed.pb -rpx uart_tx_drc_routed.rpx
 | Design       : uart_tx
@@ -54,7 +54,7 @@ Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net tx_done_reg_i_1_n_0 is a gated clock net sourced by a combinational pin tx_done_reg_i_1/O, cell tx_done_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net selected_frame__0 is a gated clock net sourced by a combinational pin selected_frame_reg[1]_i_2/O, cell selected_frame_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

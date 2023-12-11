@@ -1,0 +1,94 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Tue Dec  5 14:36:33 2023
+| Host         : dhep-sipm running 64-bit Ubuntu 22.04.3 LTS
+| Command      : report_control_sets -verbose -file pmod_accelerometer_adxl362_control_sets_placed.rpt
+| Design       : pmod_accelerometer_adxl362
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    32 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    16 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              14 |            7 |
+| No           | No                    | Yes                    |              10 |            6 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              84 |           34 |
+| Yes          | No                    | Yes                    |              50 |           15 |
+| Yes          | Yes                   | No                     |              34 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |            Enable Signal            |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | spi_master_0/count_reg[3]_0[1]      |                                     |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | spi_master_0/E[1]                   |                                     |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | spi_master_0/count_reg[1]_0[1]      |                                     |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | spi_master_0/clk_toggles[4]_i_2_n_0 | spi_master_0/clk_toggles[4]_i_1_n_0 |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | spi_master_0/state_reg[1]_2[0]      | spi_master_0/AR[0]                  |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | spi_master_0/rx_buffer0             |                                     |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | spi_master_0/rx_data[7]_i_1_n_0     | spi_master_0/AR[0]                  |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | spi_master_0/count_reg[1]_0[0]      |                                     |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | spi_master_0/E[0]                   |                                     |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | spi_master_0/tx_buffer0             |                                     |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | spi_master_0/count_reg[3]_0[0]      |                                     |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG |                                     | spi_master_0/AR[0]                  |                6 |             10 |         1.67 |
+|  clk_IBUF_BUFG |                                     |                                     |                7 |             14 |         2.00 |
+|  clk_IBUF_BUFG | spi_master_0/count0                 | spi_master_0/assert_data0           |                8 |             29 |         3.62 |
+|  clk_IBUF_BUFG | spi_master_0/busy_reg_1[0]          |                                     |               19 |             32 |         1.68 |
+|  clk_IBUF_BUFG | acceleration_x[11]_i_1_n_0          | spi_master_0/AR[0]                  |               12 |             36 |         3.00 |
++----------------+-------------------------------------+-------------------------------------+------------------+----------------+--------------+
+
+

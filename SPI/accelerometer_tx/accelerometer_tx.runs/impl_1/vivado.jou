@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Dec  5 15:06:14 2023
+# Process ID: 571836
+# Current directory: /home/dhep/GitRepos/vhdl_learn2/SPI/accelerometer_tx/accelerometer_tx.runs/impl_1
+# Command line: vivado -log pmod_accelerometer_adxl362.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pmod_accelerometer_adxl362.tcl -notrace
+# Log file: /home/dhep/GitRepos/vhdl_learn2/SPI/accelerometer_tx/accelerometer_tx.runs/impl_1/pmod_accelerometer_adxl362.vdi
+# Journal file: /home/dhep/GitRepos/vhdl_learn2/SPI/accelerometer_tx/accelerometer_tx.runs/impl_1/vivado.jou
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 1596.114 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+#-----------------------------------------------------------
+source pmod_accelerometer_adxl362.tcl -notrace

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1697618717" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/uart_tx.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="uart_tx_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="uart_tx.dcp"/>
   <File Type="RDS-UTIL-PB" Name="uart_tx_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="uart_tx_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="uart_tx_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="uart_tx.vds"/>
-  <File Type="REPORTS-TCL" Name="uart_tx_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="uart_tx_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="uart_tx.tcl"/>
+  <File Type="RDS-UTIL" Name="uart_tx_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="uart_tx_reports.tcl"/>
+  <File Type="RDS-RDS" Name="uart_tx.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/uart_tx.vhd">
@@ -27,7 +24,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/digilent-xdc-master/Nexys-A7-100T-Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/digilent-xdc-master/Nexys-A7-100T-Master.xdc"/>
         <Attr Name="ImportTime" Val="1686951711"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -52,9 +49,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

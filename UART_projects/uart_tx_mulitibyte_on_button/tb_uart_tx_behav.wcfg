@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_uart_tx_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_uart_tx" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="49,254.888056 us"></ZoomStartTime>
+      <ZoomEndTime time="52,874.149270 us"></ZoomEndTime>
+      <Cursor1Time time="51,451.273489 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="170"></NameColumnWidth>
+      <ValueColumnWidth column_width="71"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject type="logic" fp_name="/tb_uart_tx/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_uart_tx/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_uart_tx/button">
+      <obj_property name="ElementShortName">button</obj_property>
+      <obj_property name="ObjectShortName">button</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_uart_tx/tx">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_uart_tx/tx_done">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_uart_tx/butt_led">
+      <obj_property name="ElementShortName">butt_led</obj_property>
+      <obj_property name="ObjectShortName">butt_led</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_uart_tx/UUT/trig">
+      <obj_property name="ElementShortName">trig</obj_property>
+      <obj_property name="ObjectShortName">trig</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_uart_tx/trig_pin">
+      <obj_property name="ElementShortName">trig_pin</obj_property>
+      <obj_property name="ObjectShortName">trig_pin</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_uart_tx/c_CLK_PERIOD">
+      <obj_property name="ElementShortName">c_CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">c_CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_uart_tx/UUT/selected_frame">
+      <obj_property name="ElementShortName">selected_frame[7:0]</obj_property>
+      <obj_property name="ObjectShortName">selected_frame[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_uart_tx/UUT/bit_index">
+      <obj_property name="ElementShortName">bit_index</obj_property>
+      <obj_property name="ObjectShortName">bit_index</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_uart_tx/UUT/bit_timer">
+      <obj_property name="ElementShortName">bit_timer</obj_property>
+      <obj_property name="ObjectShortName">bit_timer</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_uart_tx/UUT/data_select_counter">
+      <obj_property name="ElementShortName">data_select_counter</obj_property>
+      <obj_property name="ObjectShortName">data_select_counter</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_uart_tx/UUT/present_state">
+      <obj_property name="ElementShortName">present_state</obj_property>
+      <obj_property name="ObjectShortName">present_state</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_uart_tx/UUT/next_state">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+</wave_config>

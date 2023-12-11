@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="63" Path="/home/dhep/vivado_proj/tx_on_button/tx_on_button.xpr">
+<Project Product="Vivado" Version="7" Minor="63" Path="/home/dhep/GitRepos/vhdl_learn2/UART_projects/tx_on_button/tx_on_button.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="e1fb630c36ec400197d5c0a6725270ed"/>
@@ -114,7 +114,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/digilent-xdc-master/Nexys-A7-100T-Master.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/digilent-xdc-master/Nexys-A7-100T-Master.xdc"/>
           <Attr Name="ImportTime" Val="1686951711"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

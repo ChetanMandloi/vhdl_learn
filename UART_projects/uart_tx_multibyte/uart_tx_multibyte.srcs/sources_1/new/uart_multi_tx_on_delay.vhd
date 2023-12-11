@@ -17,8 +17,6 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -37,12 +35,15 @@ entity uart_tx is
         clk_freq  : integer := 100000000;
         baud_rate : integer := 9600;
         seconds_per_packet : integer := 1;
-        data_to_send1 : std_logic_vector(11 downto 0):= "100101100110";
-        data_to_send2 : std_logic_vector(11 downto 0):= "011101100001";
-        data_to_send3 : std_logic_vector(11 downto 0):= "111001110100");
+        x_in : std_logic_vector(11 downto 0):= "110101001111";
+        y_in : std_logic_vector(11 downto 0):= "110101001111";
+        z_in : std_logic_vector(11 downto 0):= "110101001111";
+        bytes_to_send : integer :=  6);
+        --data_to_send : std_logic_vector(7 downto 0):= "01110001");
     port(
-    clk,reset : in std_logic;
-    tx,tx_done 	 : out std_logic);
+    clk, uart_reset : in std_logic;
+    --x_in, y_in, z_in : in std_logic_vector(11 downto 0);
+    tx_pin 	 : out std_logic);
 
 end uart_tx;
 
@@ -60,19 +61,20 @@ signal   clk_baudrate : std_logic := '0';
 signal packet_send_f1 : std_logic := '0';
 signal packet_send_f2 : std_logic := '0';
 signal switch_on : std_logic := '0';
-signal data_select_counter : natural range 0 to 5 := 1;
-signal selected_frame: std_logic_vector(7 downto 0); 
 
 constant max_bit_length : natural := 8;                             --maximum number of bits in each state
-signal bit_index : natural range 0 to (max_bit_length -1) ;  --counts the number of bits in current state
-signal bit_timer : natural range 0 to  max_bit_length;       --specifies for how many bits ea
+signal   bit_index      : natural range 0 to (max_bit_length -1) ;  --counts the number of bits in current state
+signal 	 bit_timer 		: natural range 0 to  max_bit_length;       --specifies for how many bits ea
+
+signal data_select_counter : positive range 1 to bytes_to_send := 1;
+signal selected_frame: std_logic_vector(7 downto 0):= x_in(7 downto 0); 
+
 
 begin
 
-
-switch_on_pulse_generator: process(clk, reset)
+switch_on_pulse_generator: process(clk, uart_reset)
 begin
-    if (reset='1') then 
+    if (uart_reset='1') then 
 		packet_delay_counter<=1;
 	elsif(rising_edge(clk)) then
 		packet_delay_counter <= packet_delay_counter + 1;
@@ -85,9 +87,9 @@ begin
 	end if;
 end process;
 
-baud_rate_generator: process(clk,reset)
+baud_rate_generator: process(clk,uart_reset)
 begin
-	if (reset='1') then 
+	if (uart_reset='1') then 
 		tx_clock_counter<=1;
 	elsif(rising_edge(clk)) then
 		tx_clock_counter<=tx_clock_counter+1;
@@ -98,21 +100,28 @@ begin
 	end if;
 end process;
 
-bit_index_calculator: process(clk_baudrate,reset)
+bit_index_calculator: process(clk_baudrate,uart_reset)
 
 begin
-	if (reset='1') then 
-		present_state <= Idle;
-		bit_index <= 0;
-	elsif(rising_edge(clk_baudrate)) then
-		if(bit_index = bit_timer-1) then
-			present_state <= next_state;
-			bit_index <= 0;
-		else
-			bit_index <= bit_index+1;
-		end if;
-	end if;
-end process;
+        if (uart_reset='1') then 
+            present_state <= Idle;
+            bit_index <= 0;
+
+        elsif(rising_edge(clk_baudrate)) then
+            if(present_state = Idle) then
+                data_select_counter <= 1;
+            end if;
+            if(bit_index = bit_timer-1) then
+                if(present_state = Stop and data_select_counter < bytes_to_send) then
+                    data_select_counter <= data_select_counter + 1;
+                end if;
+                present_state <= next_state;
+                bit_index <= 0;
+            else
+                bit_index <= bit_index+1;
+            end if;
+        end if;
+    end process;
 
 tx_process: process(present_state,packet_send_f1)
 begin
@@ -120,54 +129,52 @@ begin
         packet_send_f1 <= '1';
     end if ;
 	case present_state is 
-	
-		when Idle =>
+	   
+	   when Idle =>
 			bit_timer<=1;
-			tx<='1';
-			tx_done<='0';
+			tx_pin<='1';
+
 			if (packet_send_f1= '1') then
 				next_state <= Start;
 			else
 				next_state <= Idle;
 			end if;
-			
 		when Start =>
-			bit_timer<=1;
-			tx<='0';
-			next_state<= Data;
-			
-		when Data =>
-			bit_timer <= 8;
-			case data_select_counter is
-			     when 0 =>
-			         selected_frame <= data_to_send1(7 downto 0);
+                bit_timer<=1;
+                tx_pin<='0';
+                case data_select_counter is
 			     when 1 =>
-			         selected_frame <= "0000" & data_to_send1(11 downto 8);
+			         selected_frame <= "0100" & x_in(11 downto 8);
 			     when 2 =>
-			         selected_frame <= data_to_send2(7 downto 0);
+			         selected_frame <= x_in(7 downto 0);
 			     when 3 =>
-			         selected_frame <= "0000" & data_to_send2(11 downto 8);
+			         selected_frame <= "0100" & y_in(11 downto 8);
 			     when 4 =>
-			         selected_frame <= data_to_send3(7 downto 0);
+			         selected_frame <= y_in(7 downto 0);
 			     when 5 =>
-			         selected_frame <= "0000" & data_to_send3(11 downto 8);
-			     end case;
-			tx <= data_to_send1(bit_index);
-			next_state <= Stop;
-			
-		when Stop =>
-			tx <= '1';
-			bit_timer <= 2;
-			tx_done <= '1';
-			packet_send_f1 <= '0';
-			if (data_select_counter = 5) then
-			     next_state <= Idle;
-			     data_select_counter <= 0;
-            else
-                data_select_counter <= data_select_counter + 1;
-                next_state <= Start;     
-			end if;
-		    
+			         selected_frame <= "0100" & z_in(11 downto 8);
+			     when 6 =>
+			         selected_frame <= z_in(7 downto 0);
+			     when others =>
+			         
+                end case;
+                next_state<= Data;
+                
+            when Data =>
+                bit_timer <= 8;
+			    tx_pin <= selected_frame(bit_index);
+                next_state <= Stop;
+                
+            when Stop =>
+                tx_pin <= '1';
+                bit_timer <= 1;
+                if(data_select_counter < bytes_to_send) then
+                    next_state <= Start;
+                else
+                    next_state <= Idle;
+                    packet_send_f1 <= '0';
+                end if;
+                
 			
 		end case;
 	end process;
