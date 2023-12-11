@@ -36,13 +36,14 @@ entity uart_tx is
     generic(
         clk_freq  : integer := 100000000;
         baud_rate : integer := 9600;
+        bytes_to_send : integer :=  6;
         --data_to_send : std_logic_vector(7 downto 0):= "01110001";
-        data_to_send1 : std_logic_vector(11 downto 0):= "100101100110");
-        --data_to_send2 : std_logic_vector(11 downto 0):= "011101100001";
-        --data_to_send3 : std_logic_vector(11 downto 0):= "111001110100");
+        data_to_send1 : std_logic_vector(11 downto 0):= "110101001111";
+        data_to_send2 : std_logic_vector(11 downto 0):= "001001001001";
+        data_to_send3 : std_logic_vector(11 downto 0):= "110001000101");
     port(
     clk,reset, button : in std_logic;
-    tx,tx_done,butt_led, trig_pin 	 : out std_logic);
+    tx,tx_done,butt_led, trig_pin, s_pin1, s_pin2 	 : out std_logic);
 
 end uart_tx;
 
@@ -61,10 +62,12 @@ architecture Behavioral of uart_tx is
     signal db_button : std_logic:= '0';
     signal button_buff : std_logic_vector(1 downto 0) := "00";
     signal trig :std_logic:= '0';
+    signal tx_done_sig : std_logic:= '0';
     signal trig_counter : positive range 1 to 5*tx_clock_counter_limit :=1;
     
-    signal data_select_counter : positive range 1 to 2 := 1;
-    signal selected_frame: std_logic_vector(7 downto 0):= "00000000"; 
+    
+    signal data_select_counter : positive range 1 to bytes_to_send := 1;
+    signal selected_frame: std_logic_vector(7 downto 0):= data_to_send1(7 downto 0); 
     
     component debounce is
             port(
@@ -90,7 +93,7 @@ architecture Behavioral of uart_tx is
             end if;
             if(trig = '1') then
                 trig_counter <= trig_counter + 1 ;
-                if(trig_counter = 5*tx_clock_counter_limit) then
+                if(trig_counter = 4*tx_clock_counter_limit) then
                     trig <= '0';
                     trig_counter <= 1;
                 end if; 
@@ -111,14 +114,20 @@ architecture Behavioral of uart_tx is
         end if;
     end process;
     
-    bit_index_calculator: process(clk_baudrate,reset)
+    bit_index_calculator: process(clk_baudrate, reset, next_state)
     
     begin
         if (reset='1') then 
             present_state <= Idle;
             bit_index <= 0;
         elsif(rising_edge(clk_baudrate)) then
+            if(present_state = Idle) then
+                data_select_counter <= 1;
+            end if;
             if(bit_index = bit_timer-1) then
+                if(present_state = Stop and data_select_counter < bytes_to_send) then
+                        data_select_counter <= data_select_counter + 1;
+                end if;
                 present_state <= next_state;
                 bit_index <= 0;
             else
@@ -127,14 +136,17 @@ architecture Behavioral of uart_tx is
         end if;
     end process;
     
-    tx_process: process(present_state,trig)
+    tx_process: process(clk)
     begin
         case present_state is 
         
             when Idle =>
+                s_pin1 <= '0';
+                s_pin2 <= '0';
+
                 bit_timer<=1;
                 tx<='1';
-                tx_done<='0';
+                tx_done_sig<='0';
                 if (trig='1') then
                     next_state <= Start;
                 else
@@ -142,41 +154,48 @@ architecture Behavioral of uart_tx is
                 end if;
                 
             when Start =>
+                s_pin1 <= '0';
+                s_pin2 <= '1';
                 bit_timer<=1;
                 tx<='0';
+                case data_select_counter is
+			     when 1 =>
+			         selected_frame <= "0100" & data_to_send1(11 downto 8);
+			     when 2 =>
+			         selected_frame <= data_to_send1(7 downto 0);
+			     when 3 =>
+			         selected_frame <= "0100" & data_to_send2(11 downto 8);
+			     when 4 =>
+			         selected_frame <= data_to_send2(7 downto 0);
+			     when 5 =>
+			         selected_frame <= "0100" & data_to_send3(11 downto 8);
+			     when 6 =>
+			         selected_frame <= data_to_send3(7 downto 0);
+			     when others =>
+			         
+                end case;
                 next_state<= Data;
                 
             when Data =>
+                s_pin1 <= '1';
+                s_pin2 <= '0';
                 bit_timer <= 8;
-                case data_select_counter is
-			     when 1 =>
-			         selected_frame <= data_to_send1(7 downto 0);
-			     when 2 =>
-			         selected_frame <= "0100" & data_to_send1(11 downto 8);
-			     --when 2 =>
-			     --    selected_frame <= data_to_send2(7 downto 0);
-			     --when 3 =>
-			     --    selected_frame <= "0100" & data_to_send2(11 downto 8);
-			     --when 4 =>
-			     --    selected_frame <= data_to_send3(7 downto 0);
-			     --when 5 =>
-			     --    selected_frame <= "0100" & data_to_send3(11 downto 8);
-                end case;
 			    tx <= selected_frame(bit_index);
                 next_state <= Stop;
                 
             when Stop =>
+                s_pin1 <= '1';
+                s_pin2 <= '1';
                 tx <= '1';
-                bit_timer <= 2;
-                tx_done <= '1';
-                if (data_select_counter = 2) then
-                    next_state <= Idle;
-                    data_select_counter <= 1;
+                bit_timer <= 1;
+                if(data_select_counter < bytes_to_send) then
+                    next_state <= Start;
                 else
-                    data_select_counter <= data_select_counter + 1;
-                    next_state <= Start;     
-                end if; 
+                    next_state <= Idle;
+                    tx_done_sig <= '1';
+                end if;
             end case;
         end process;
      trig_pin <= trig;
+     tx_done <= tx_done_sig;
 end Behavioral;
