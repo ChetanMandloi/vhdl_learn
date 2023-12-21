@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Dec 13 16:48:02 2023
+# Process ID: 239663
+# Current directory: /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/impl_1
+# Command line: vivado -log i2c_master.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source i2c_master.tcl -notrace
+# Log file: /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/impl_1/i2c_master.vdi
+# Journal file: /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/impl_1/vivado.jou
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2793.350 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+#-----------------------------------------------------------
+source i2c_master.tcl -notrace

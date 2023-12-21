@@ -1,0 +1,298 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Dec 20 16:07:28 2023
+# Process ID: 1947399
+# Current directory: /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/synth_1
+# Command line: vivado -log temp_sensor_adt7420.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source temp_sensor_adt7420.tcl
+# Log file: /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/synth_1/temp_sensor_adt7420.vds
+# Journal file: /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/synth_1/vivado.jou
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2787.655 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+#-----------------------------------------------------------
+source temp_sensor_adt7420.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1298.633 ; gain = 21.023 ; free physical = 1176 ; free virtual = 9581
+Command: read_checkpoint -auto_incremental -incremental /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/utils_1/imports/synth_1/i2c_master.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/utils_1/imports/synth_1/i2c_master.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top temp_sensor_adt7420 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1947500
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2042.152 ; gain = 380.699 ; free physical = 212 ; free virtual = 8617
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-10729] formal port 'acknowledge_error' of mode 'buffer' cannot be associated with actual port 'i2c_ack_err' of mode 'out' [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/top_module.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'temp_sensor_adt7420' [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/top_module.vhd:42]
+	Parameter input_clk bound to: 100000000 - type: integer 
+	Parameter bus_clk bound to: 400000 - type: integer 
+INFO: [Synth 8-3491] module 'i2c_master' declared at '/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/i2c_master.vhd:34' bound to instance 'i2c_master_0' of component 'i2c_master' [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/top_module.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'i2c_master' [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/i2c_master.vhd:53]
+	Parameter bus_clk bound to: 400000 - type: integer 
+WARNING: [Synth 8-3819] Generic 'input_clk' not present in instantiated entity will be ignored [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/top_module.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'i2c_master' (0#1) [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/i2c_master.vhd:53]
+INFO: [Synth 8-226] default block is never used [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/top_module.vhd:142]
+WARNING: [Synth 8-614] signal 'scl' is read in the process but is not in the sensitivity list [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/top_module.vhd:82]
+WARNING: [Synth 8-614] signal 'sda' is read in the process but is not in the sensitivity list [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/top_module.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'temp_sensor_adt7420' (0#1) [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/sources_1/new/top_module.vhd:42]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2108.121 ; gain = 446.668 ; free physical = 168 ; free virtual = 8549
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2125.934 ; gain = 464.480 ; free physical = 166 ; free virtual = 8545
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2125.934 ; gain = 464.480 ; free physical = 166 ; free virtual = 8545
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2125.934 ; gain = 0.000 ; free physical = 166 ; free virtual = 8543
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc]
+Finished Parsing XDC File [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/temp_sensor_adt7420_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/temp_sensor_adt7420_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2269.684 ; gain = 0.000 ; free physical = 172 ; free virtual = 8532
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2269.684 ; gain = 0.000 ; free physical = 172 ; free virtual = 8532
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 166 ; free virtual = 8524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 166 ; free virtual = 8524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 166 ; free virtual = 8524
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_master'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'temp_sensor_adt7420'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             ready_state |                        000000001 |                             0000
+             start_state |                        000000010 |                             0001
+           command_state |                        000000100 |                             0010
+     acknowledge_state_1 |                        000001000 |                             0011
+             write_state |                        000010000 |                             0100
+     acknowledge_state_2 |                        000100000 |                             0110
+              read_state |                        001000000 |                             0101
+     acknowledge_state_3 |                        010000000 |                             0111
+              stop_state |                        100000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'i2c_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   start |                              000 |                              000
+          set_resolution |                              001 |                              001
+                   pause |                              010 |                              010
+               read_data |                              011 |                              011
+           output_result |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'temp_sensor_adt7420'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 163 ; free virtual = 8522
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   23 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input   23 Bit        Muxes := 2     
+	   5 Input   23 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 1     
+	   5 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   9 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 9     
+	   2 Input    8 Bit        Muxes := 2     
+	   5 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 12    
+	   2 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 8     
+	   5 Input    1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 159 ; free virtual = 8510
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 148 ; free virtual = 8499
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 166 ; free virtual = 8512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 167 ; free virtual = 8512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 145 ; free virtual = 8491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 145 ; free virtual = 8491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 145 ; free virtual = 8491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 145 ; free virtual = 8491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 145 ; free virtual = 8491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 145 ; free virtual = 8491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |     6|
+|3     |LUT1   |     2|
+|4     |LUT2   |     9|
+|5     |LUT3   |    24|
+|6     |LUT4   |    21|
+|7     |LUT5   |    48|
+|8     |LUT6   |    32|
+|9     |FDCE   |    45|
+|10    |FDRE   |    58|
+|11    |FDSE   |     7|
+|12    |IBUF   |     2|
+|13    |IOBUF  |     2|
+|14    |OBUF   |    19|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 145 ; free virtual = 8491
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2269.684 ; gain = 464.480 ; free physical = 145 ; free virtual = 8491
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2269.684 ; gain = 608.230 ; free physical = 145 ; free virtual = 8491
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2269.684 ; gain = 0.000 ; free physical = 417 ; free virtual = 8762
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2269.684 ; gain = 0.000 ; free physical = 414 ; free virtual = 8759
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Synth Design complete | Checksum: 544d7ce7
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:45 . Memory (MB): peak = 2269.684 ; gain = 947.238 ; free physical = 414 ; free virtual = 8759
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1939.421; main = 1672.249; forked = 397.746
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3206.910; main = 2269.688; forked = 969.238
+INFO: [Common 17-1381] The checkpoint '/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/synth_1/temp_sensor_adt7420.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file temp_sensor_adt7420_utilization_synth.rpt -pb temp_sensor_adt7420_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 20 16:08:35 2023...

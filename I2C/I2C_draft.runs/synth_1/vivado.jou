@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Dec 20 16:07:28 2023
+# Process ID: 1947399
+# Current directory: /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/synth_1
+# Command line: vivado -log temp_sensor_adt7420.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source temp_sensor_adt7420.tcl
+# Log file: /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/synth_1/temp_sensor_adt7420.vds
+# Journal file: /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/synth_1/vivado.jou
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2787.655 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+#-----------------------------------------------------------
+source temp_sensor_adt7420.tcl -notrace
