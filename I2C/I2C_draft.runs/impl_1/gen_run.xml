@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1703068723">
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="temp_sensor_adt7420_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="temp_sensor_adt7420_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-BGN" Name="temp_sensor_adt7420.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="temp_sensor_adt7420.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="temp_sensor_adt7420.ltx"/>
+  <File Type="RBD_FILE" Name="temp_sensor_adt7420.rbd"/>
+  <File Type="NPI_FILE" Name="temp_sensor_adt7420.npi"/>
+  <File Type="RNPI_FILE" Name="temp_sensor_adt7420.rnpi"/>
+  <File Type="CFI_FILE" Name="temp_sensor_adt7420.cfi"/>
+  <File Type="RCFI_FILE" Name="temp_sensor_adt7420.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="temp_sensor_adt7420_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="temp_sensor_adt7420_soc.pdi"/>
+  <File Type="RDI-RDI" Name="temp_sensor_adt7420.vdi"/>
+  <File Type="PDI-FILE" Name="temp_sensor_adt7420.pdi"/>
+  <File Type="BITSTR-MMI" Name="temp_sensor_adt7420.mmi"/>
+  <File Type="BITSTR-BMM" Name="temp_sensor_adt7420_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="temp_sensor_adt7420.nky"/>
+  <File Type="BITSTR-RBT" Name="temp_sensor_adt7420.rbt"/>
+  <File Type="BITSTR-MSK" Name="temp_sensor_adt7420.msk"/>
+  <File Type="BG-BIN" Name="temp_sensor_adt7420.bin"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="BG-BIT" Name="temp_sensor_adt7420.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="i2c_master_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="i2c_master_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="i2c_master_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="i2c_master_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="i2c_master_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="i2c_master_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="temp_sensor_adt7420_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="temp_sensor_adt7420_postroute_physopt.dcp"/>
+  <File Type="BG-DRC" Name="temp_sensor_adt7420.drc"/>
+  <File Type="ROUTE-RQS-PB" Name="temp_sensor_adt7420_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="temp_sensor_adt7420_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="temp_sensor_adt7420_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="temp_sensor_adt7420_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="temp_sensor_adt7420_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="temp_sensor_adt7420_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="temp_sensor_adt7420_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="temp_sensor_adt7420_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="temp_sensor_adt7420_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="temp_sensor_adt7420_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="temp_sensor_adt7420_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="temp_sensor_adt7420_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="temp_sensor_adt7420_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="temp_sensor_adt7420_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="temp_sensor_adt7420_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="temp_sensor_adt7420_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="temp_sensor_adt7420_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="temp_sensor_adt7420_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="temp_sensor_adt7420_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="temp_sensor_adt7420_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="temp_sensor_adt7420_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="temp_sensor_adt7420_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="temp_sensor_adt7420_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="temp_sensor_adt7420_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="temp_sensor_adt7420_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="temp_sensor_adt7420_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="temp_sensor_adt7420_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="temp_sensor_adt7420_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="temp_sensor_adt7420_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="temp_sensor_adt7420_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="temp_sensor_adt7420_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="temp_sensor_adt7420_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="temp_sensor_adt7420_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="temp_sensor_adt7420_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="temp_sensor_adt7420_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="temp_sensor_adt7420_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="temp_sensor_adt7420_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="temp_sensor_adt7420_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="temp_sensor_adt7420_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="temp_sensor_adt7420_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="temp_sensor_adt7420_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="temp_sensor_adt7420_rqa_opted.pb"/>
+  <File Type="OPT-HWDEF" Name="temp_sensor_adt7420.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="temp_sensor_adt7420_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="temp_sensor_adt7420_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="temp_sensor_adt7420_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="temp_sensor_adt7420_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="temp_sensor_adt7420_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="temp_sensor_adt7420_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="temp_sensor_adt7420.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/i2c_master.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_module.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="temp_sensor_adt7420"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Downloads/digilent-xdc-master/Nexys-A7-100T-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1686951711"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/i2c_master.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
