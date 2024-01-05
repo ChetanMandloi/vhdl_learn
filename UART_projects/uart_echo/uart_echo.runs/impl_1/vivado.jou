@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Nov  3 16:03:23 2023
-# Process ID: 87317
-# Current directory: /home/dhep/vivado_proj/uart_echo/uart_echo.runs/impl_1
+# Start of session at: Thu Jan  4 15:06:50 2024
+# Process ID: 439637
+# Current directory: /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.runs/impl_1
 # Command line: vivado -log uart_Echo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uart_Echo.tcl -notrace
-# Log file: /home/dhep/vivado_proj/uart_echo/uart_echo.runs/impl_1/uart_Echo.vdi
-# Journal file: /home/dhep/vivado_proj/uart_echo/uart_echo.runs/impl_1/vivado.jou
-# Running On: dhep-sipm, OS: Linux, CPU Frequency: 2793.733 MHz, CPU Physical cores: 4, Host memory: 12523 MB
+# Log file: /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.runs/impl_1/uart_Echo.vdi
+# Journal file: /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.runs/impl_1/vivado.jou
+# Running On: dhep-sipm, OS: Linux, CPU Frequency: 1703.987 MHz, CPU Physical cores: 4, Host memory: 12523 MB
 #-----------------------------------------------------------
 source uart_Echo.tcl -notrace

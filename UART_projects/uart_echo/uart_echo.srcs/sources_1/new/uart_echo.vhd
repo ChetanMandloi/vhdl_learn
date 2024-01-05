@@ -39,7 +39,7 @@ baud_rate : integer := 9600);
 port(clk, rst, trig_pin, button: in std_logic;
 debug_tx, debug_rx : out std_logic;
 LED : out std_logic_vector(7 downto 0);
-tx, tx_done: out std_logic;
+tx, tx_done: buffer std_logic;
 rx: in std_logic);
 
 end Uart_Echo;
@@ -192,7 +192,6 @@ begin
             when Idle =>
                 tx_bit_timer<=1;
                 tx<='1';
-                debug_tx <= '0';
                 tx_done<='0';
                 if (trig_tx_flag='1') then
                     tx_next_state <= Start;
@@ -208,12 +207,10 @@ begin
             when Data =>
                 tx_bit_timer <= 8;
                 tx <= data_to_send(tx_bit_index);
-                debug_tx <= data_to_send(tx_bit_index);
                 tx_next_state <= Stop;
                 
             when Stop =>
                 tx <= '1';
-                debug_tx <= '1';
                 tx_bit_timer <= 1;
                 tx_done <= '1';
                 if (trig_tx_flag='0') then
@@ -227,4 +224,5 @@ begin
 
 	
 	debug_rx <= rx;
+	debug_tx <= tx;
 end Behavioral;

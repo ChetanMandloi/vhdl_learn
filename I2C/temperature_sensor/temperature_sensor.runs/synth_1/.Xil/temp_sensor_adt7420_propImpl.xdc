@@ -1,8 +1,10 @@
-set_property SRC_FILE_INFO {cfile:/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc rfile:../../../I2C_draft.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/dhep/GitRepos/vhdl_learn2/I2C/temperature_sensor/temperature_sensor.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc rfile:../../../temperature_sensor.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { reset_l }]; #IO_L24N_T3_RS0_15 Sch=sw[0]
+set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { uart_reset }]; #IO_L3N_T0_DQS_EMCCLK_14 Sch=sw[1]
 set_property src_info {type:XDC file:1 line:30 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { temperature[0] }]; #IO_L18P_T2_A24_15 Sch=led[0]
 set_property src_info {type:XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
@@ -36,7 +38,7 @@ set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { temper
 set_property src_info {type:XDC file:1 line:45 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V11   IOSTANDARD LVCMOS33 } [get_ports { temperature[15] }]; #IO_L21N_T3_DQS_A06_D22_14 Sch=led[15]
 set_property src_info {type:XDC file:1 line:86 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { i2c_ack_err }]; #IO_L20N_T3_A19_15 Sch=ja[1]
+set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { i2c_acknowledge_error }]; #IO_L20N_T3_A19_15 Sch=ja[1]
 set_property src_info {type:XDC file:1 line:87 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { scl_pin }]; #IO_L21N_T3_DQS_A18_15 Sch=ja[2]
 set_property src_info {type:XDC file:1 line:88 export:INPUT save:INPUT read:READ} [current_design]
@@ -45,3 +47,5 @@ set_property src_info {type:XDC file:1 line:170 export:INPUT save:INPUT read:REA
 set_property -dict { PACKAGE_PIN C14   IOSTANDARD LVCMOS33 } [get_ports { scl }]; #IO_L1N_T0_AD0N_15 Sch=tmp_scl
 set_property src_info {type:XDC file:1 line:171 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN C15   IOSTANDARD LVCMOS33 } [get_ports { sda }]; #IO_L12N_T1_MRCC_15 Sch=tmp_sda
+set_property src_info {type:XDC file:1 line:186 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports {  uart_tx_pin }]; #IO_L11N_T1_SRCC_35 Sch=uart_rxd_out

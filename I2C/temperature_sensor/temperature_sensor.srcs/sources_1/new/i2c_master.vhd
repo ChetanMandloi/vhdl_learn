@@ -74,36 +74,7 @@ architecture Behavioral of i2c_master is
     
 
 begin
-    scl_proc: process(clk, reset_l)
-    variable count : integer range 0 to freq_divider*4; 
-  begin
-    if(rising_edge(clk)) then
-        if(reset_l = '0')then
-            count := 0;
-        else
-            if(count = freq_divider*4-1) then       --end of timing cycle
-                count := 0;                      --reset timer
-            else
-                count := count + 1;
-            end if;
-            case count is
-                when 0 to freq_divider-1 =>           -- 1st quadrant of clock cycle
-                  scl_clk <= '0';
-                  data_clk <= '0';
-                when freq_divider to freq_divider*2-1 =>   -- 2nd quadrant of clock cycle
-                  scl_clk <= '0';
-                  data_clk <= '1';
-                when freq_divider*2 to freq_divider*3-1 => -- 3rd quadrant of clock cycle
-                  scl_clk <= '1';    
-                  data_clk <= '1';
-                when others =>                   -- 4th quadrant of clock cycle
-                  scl_clk <= '1';
-                  data_clk <= '0';
-            end case;
-        end if;
-    end if;
-
-    end process;
+    
     
   state_machine: process(data_clk, reset_l)
   begin
@@ -234,13 +205,44 @@ begin
     end if;
     
   end process;  
+  
+  scl_proc: process(clk, reset_l)
+    variable count : integer range 0 to freq_divider*4; 
+  begin 
+    if(rising_edge(clk)) then
+        if(reset_l = '0')then
+            count := 0;
+        else
+            if(count = freq_divider*4-1) then       --end of timing cycle
+                count := 0;                      --reset timer
+            else
+                count := count + 1;
+            end if;
+            case count is
+                when 0 to freq_divider-1 =>           -- 1st quadrant of clock cycle
+                  scl_clk <= '0';
+                  data_clk <= '0';
+                when freq_divider to freq_divider*2-1 =>   -- 2nd quadrant of clock cycle
+                  scl_clk <= '0';
+                  data_clk <= '1';
+                when freq_divider*2 to freq_divider*3-1 => -- 3rd quadrant of clock cycle
+                  scl_clk <= '1';    
+                  data_clk <= '1';
+                when others =>                   -- 4th quadrant of clock cycle
+                  scl_clk <= '1';
+                  data_clk <= '0';
+            end case;
+        end if;
+    end if;
+
+    end process;
+  
 
   with state select
     sda_enable_l <=  data_clk when start_state, --no sda in start
                not data_clk when stop_state,   -- yes to sda in stop
               sda_internal when others;      --it depends on sda_internal for others
               --this allows the other states to release sda when needed for slave to write
-    
     
     scl <= scl_clk when scl_enable = '1' else 'Z';
     sda <= '0' when sda_enable_l = '0' else 'Z';

@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/dhep/vivado_proj/uart_echo/uart_echo.runs/synth_1'
+HD_PWD='/home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

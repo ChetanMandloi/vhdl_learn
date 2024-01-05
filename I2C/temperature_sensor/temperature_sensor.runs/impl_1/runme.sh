@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/impl_1'
+HD_PWD='/home/dhep/GitRepos/vhdl_learn2/I2C/temperature_sensor/temperature_sensor.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
