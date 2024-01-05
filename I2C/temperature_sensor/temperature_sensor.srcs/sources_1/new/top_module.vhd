@@ -25,18 +25,23 @@ use ieee.std_logic_1164.all;
 entity temp_sensor_adt7420 is
   generic(
     sys_clk_freq : integer := 100000000;      
+    uart_clk_freq  : integer := 100000000;
+    bytes_to_send : integer := 2;
+    uart_baud_rate : integer := 9600;
     temp_sensor_addr : std_logic_vector(6 downto 0) := "1001011"); --I2C address of the temp sensor
   port(
       
     scl_pin : out std_logic;
     sda_pin : out std_logic;
   
-    clk : in std_logic;    
+    clk : in std_logic; 
+    uart_reset: in std_logic;   
     reset_l : in    std_logic;  
     scl : inout std_logic;  
-    sda  : inout std_logic;    
+    sda : inout std_logic;    
     i2c_acknowledge_error : out   std_logic;    
-    temperature : out   std_logic_vector(15 downto 0)); 
+    temperature : buffer   std_logic_vector(15 downto 0);
+    uart_tx_pin : out std_logic); 
 end temp_sensor_adt7420;
 
 architecture behavior of temp_sensor_adt7420 is
@@ -48,6 +53,8 @@ architecture behavior of temp_sensor_adt7420 is
   signal i2c_data_write : std_logic_vector(7 downto 0); 
   signal i2c_data_read : std_logic_vector(7 downto 0); 
   signal i2c_busy : std_logic;
+  signal uart_busy_read: std_logic;
+  signal uart_ready_read: std_logic;
   signal busy_prev : std_logic;      
   signal temp_data : std_logic_vector(15 downto 0); 
 
@@ -68,17 +75,44 @@ architecture behavior of temp_sensor_adt7420 is
      sda  : inout  std_logic;      
      scl : inout  std_logic);     
   end component;
+  
+  component uart_tx is
+    
+        generic(
+            uart_clk_freq  : integer := 100000000;
+            uart_baud_rate : integer := 9600;
+            seconds_per_packet : integer := 1;
+            bytes_to_send : integer :=  2);
+        port(
+        clk, uart_reset : in std_logic;
+        busy, ready : out std_logic;
+        temp_in : in std_logic_vector(15 downto 0);
+        uart_tx_pin 	 : out std_logic);
+    
+    end component uart_tx;
 
 begin
 
   --instantiate the i2c master
   i2c_master_0:  i2c_master
     generic map(input_clk => sys_clk_freq, bus_clk => 400000)
-    port map(clk => clk, reset_l => reset_l, enable => i2c_enable, addr => i2c_addr,
-             read_write => i2c_rw, data_write => i2c_data_write, busy => i2c_busy,
-             data_read => i2c_data_read, acknowledge_error => i2c_acknowledge_error, sda => sda,
-             scl => scl);
+    port map(clk => clk, reset_l => reset_l, enable => i2c_enable, addr => i2c_addr,read_write => i2c_rw, data_write => i2c_data_write, 
+             busy => i2c_busy, data_read => i2c_data_read, acknowledge_error => i2c_acknowledge_error, sda => sda, scl => scl);
 
+    uart_tx_inst : component uart_tx
+        generic map (
+            uart_clk_freq => uart_clk_freq,
+            uart_baud_rate => uart_baud_rate,
+            bytes_to_send => bytes_to_send
+        )
+        port map (
+            clk => clk,
+            uart_reset => uart_reset,  
+            temp_in => temperature,
+            busy => uart_busy_read,
+            ready => uart_ready_read,
+            uart_tx_pin => uart_tx_pin
+        );
   process(clk, reset_l)
     variable busy_cnt : integer RANGE 0 TO 3 := 0;               --counts the busy signal transistions during one transaction
     variable counter  : integer RANGE 0 TO sys_clk_freq/20 := 0; --counts 100ms to wait before communicating
@@ -163,8 +197,12 @@ begin
 
         --output the temperature data
         when output_result =>
-          temperature <= temp_data(15 downto 0);       --write temperature data to output
-          state <= pause;             
+            if uart_busy_read = '0' then
+                temperature <= temp_data(15 downto 0);       --write temperature data to output
+            else
+                null;
+            end if;
+            state <= pause;             
 
         --default to start state
         when OTHERS =>

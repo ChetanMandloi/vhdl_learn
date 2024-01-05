@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/dhep/vivado_proj/uart_echo/uart_echo.runs/synth_1/uart_Echo.tcl"
+  variable script "/home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.runs/synth_1/uart_Echo.tcl"
   variable category "vivado_synth"
 }
 
@@ -78,15 +78,15 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/dhep/vivado_proj/uart_echo/uart_echo.cache/wt [current_project]
-set_property parent.project_path /home/dhep/vivado_proj/uart_echo/uart_echo.xpr [current_project]
+set_property webtalk.parent_dir /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.cache/wt [current_project]
+set_property parent.project_path /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo /home/dhep/vivado_proj/uart_echo/uart_echo.cache/ip [current_project]
+set_property ip_output_repo /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /home/dhep/vivado_proj/uart_echo/uart_echo.srcs/sources_1/new/uart_echo.vhd
+read_vhdl -library xil_defaultlib /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.srcs/sources_1/new/uart_echo.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -96,12 +96,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/dhep/vivado_proj/uart_echo/uart_echo.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files /home/dhep/vivado_proj/uart_echo/uart_echo.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc]
+read_xdc /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.srcs/constrs_1/imports/digilent-xdc-master/Nexys-A7-100T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/dhep/vivado_proj/uart_echo/uart_echo.srcs/utils_1/imports/synth_1/uart_Echo.dcp
+read_checkpoint -auto_incremental -incremental /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.srcs/utils_1/imports/synth_1/uart_Echo.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

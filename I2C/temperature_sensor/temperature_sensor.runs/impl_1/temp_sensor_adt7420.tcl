@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.runs/impl_1/temp_sensor_adt7420.tcl"
+  variable script "/home/dhep/GitRepos/vhdl_learn2/I2C/temperature_sensor/temperature_sensor.runs/impl_1/temp_sensor_adt7420.tcl"
   variable category "vivado_impl"
 }
 
@@ -127,7 +127,7 @@ set rc [catch {
   set_param chipscope.maxJobs 2
   set_param runs.launchOptions { -jobs 4  }
   open_checkpoint temp_sensor_adt7420_routed.dcp
-  set_property webtalk.parent_dir /home/dhep/GitRepos/vhdl_learn2/I2C/I2C_draft.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/dhep/GitRepos/vhdl_learn2/I2C/temperature_sensor/temperature_sensor.cache/wt [current_project]
 set_property TOP temp_sensor_adt7420 [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

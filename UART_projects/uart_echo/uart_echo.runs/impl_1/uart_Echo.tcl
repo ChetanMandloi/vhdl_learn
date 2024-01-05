@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/dhep/vivado_proj/uart_echo/uart_echo.runs/impl_1/uart_Echo.tcl"
+  variable script "/home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.runs/impl_1/uart_Echo.tcl"
   variable category "vivado_impl"
 }
 
@@ -127,7 +127,7 @@ set rc [catch {
   set_param chipscope.maxJobs 2
   set_param runs.launchOptions { -jobs 4  }
   open_checkpoint uart_Echo_routed.dcp
-  set_property webtalk.parent_dir /home/dhep/vivado_proj/uart_echo/uart_echo.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/dhep/GitRepos/vhdl_learn2/UART_projects/uart_echo/uart_echo.cache/wt [current_project]
 set_property TOP uart_Echo [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
